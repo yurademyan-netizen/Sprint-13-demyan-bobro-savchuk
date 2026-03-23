@@ -2,36 +2,47 @@
     ViewData["Title"] = "SprintTasks";
 }
 
+<style>
+    .task-menu__link{
+        color: #000;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .task-menu__link:hover{
+        color:lightslategray;
+    }
+</style>
+
 <div class="d-flex flex-column align-items-start gap-2 mt-4">
     <h1 class="display-2 fw-bold">Sprint13. Tasks</h1>
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand mb-0 h2" style="color: black;" href="../Tasks/Greetings">Greetings</a>
+            <a class=" task-menu__link task-menu-link navbar-brand mb-0 h2" href="../Tasks/Greetings">Greetings</a>
         </div>
     </nav>
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand mb-0 h2" style="color: black;" href="../Tasks/ProductInfo">Products</a>
+            <a class="task-menu__link task-menu-link navbar-brand mb-0 h2" href="../Tasks/ProductInfo">Products</a>
         </div>
     </nav>
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand mb-0 h2" style="color: black;" href="#">Supermarkets</a>
+            <a class="task-menu__link task-menu-link navbar-brand mb-0 h2" href="#">Supermarkets</a>
         </div>
     </nav>
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand mb-0 h2" style="color: black;" href="#">Shopping list</a>
+            <a class="task-menu__link task-menu-link navbar-brand mb-0 h2" href="#">Shopping list</a>
         </div>
     </nav>
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand mb-0 h2" style="color: black;" href="#">Shopping cart</a>
+            <a class="task-menu__link task-menu-link navbar-brand mb-0 h2" href="#">Shopping cart</a>
         </div>
     </nav>
 
