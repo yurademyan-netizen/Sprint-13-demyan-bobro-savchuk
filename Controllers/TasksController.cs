@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Sprint_13_Dy_Sa_Bo.Models;
 using Sprint_13_Dy_Sa_Bo.Services;
 
 namespace Sprint_13_Dy_Sa_Bo.Controllers
@@ -23,6 +24,12 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
             ViewData["Message2"] = "Welcome to our project!";
 
             return View(date);
+        }
+
+
+        public IActionResult ProductInfo()
+        {
+            return View();
         }
     }
 }

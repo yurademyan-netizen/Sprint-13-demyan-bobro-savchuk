@@ -1,0 +1,38 @@
+﻿@using Sprint_13_Dy_Sa_Bo.Models @{
+    ViewData["Title"] = "ProductInfo";
+
+    List<Product> products = new List<Product>()
+    {
+        new Product("Bread", 10),
+        new Product("Milk", 11),
+        new Product("Cheese", 140),
+        new Product("Sausage", 110),
+        new Product("Potato", 7),
+        new Product("Banana", 23),
+        new Product("Tomato", 25),
+        new Product("Candy", 75)
+    };
+}
+
+<div class="d-flex flex-column gap-4">
+    <h1 class="display-2 fw-bold ">hresdfs</h1>
+
+    <table class="table w-25">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Product product in products)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
