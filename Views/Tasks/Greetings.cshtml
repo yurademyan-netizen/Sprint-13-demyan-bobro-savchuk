@@ -1,5 +1,4 @@
-﻿@model DateTime
-<style>
+﻿<style>
     .simple-table {
         border-collapse: collapse;
         font-family: Arial, sans-serif;
@@ -24,16 +23,17 @@
         }
 </style>
 <h2>Greetings</h2>
-<hr/>
+<hr />
 <p>The value of my message is: @ViewData["Message1"]</p>
-<hr/>
+<hr />
 <p>The greeting is: @ViewData["Message2"]</p>
-<hr/>
-<p>Today in Ukraine is @Model.DayOfWeek</p>
-@if (Model.Hour >= 18){
+<hr />
+<p>Today in Ukraine is @DateTime.Now.DayOfWeek</p>
+@if (@DateTime.Now.Hour >= 18)
+{
     <p>We wish you: Good evening!</p>
 }
-else if (Model.Hour >= 12)
+else if (@DateTime.Now.Hour >= 12)
 {
     <p>We wish you: Good afternoon!</p>
 }
@@ -41,8 +41,8 @@ else
 {
     <p>We wish you: Good morning!</p>
 }
-<hr/>
-<p>Today is @Model.DayOfWeek</p>
+<hr />
+<p>Today is @DateTime.Now.DayOfWeek</p>
 <hr />
 <table class="simple-table">
     <thead>
@@ -54,19 +54,19 @@ else
     <tbody>
         <tr>
             <td>Day</td>
-            <td>@Model.DayOfWeek</td>
+            <td>@DateTime.Now.DayOfWeek</td>
         </tr>
         <tr>
             <td>Hour</td>
-            <td>@Model.Hour</td>
+            <td>@DateTime.Now.Hour</td>
         </tr>
         <tr>
             <td>Minute</td>
-            <td>@Model.Minute</td>
+            <td>@DateTime.Now.Minute</td>
         </tr>
         <tr>
             <td>Second</td>
-            <td>@Model.Second</td>
+            <td>@DateTime.Now.Second</td>
         </tr>
     </tbody>
 </table>

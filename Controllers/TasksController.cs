@@ -19,17 +19,29 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
 
         public IActionResult Greetings()
         {
-            DateTime date = timeService.GetDateTime();
             ViewData["Message1"] = "Hello C# Marathon!";
             ViewData["Message2"] = "Welcome to our project!";
 
-            return View(date);
+            return View();
         }
-
 
         public IActionResult ProductInfo()
         {
             return View();
+        }
+
+        public IActionResult ShoppingList()
+        {
+            Dictionary<string, int> dictionary = new Dictionary<string, int>
+            {
+                { "Milk", 2 },
+                { "Bread", 2 },
+                { "Cake", 1 },
+                { "IceCream", 5 },
+                { "Cola", 10 }
+            };
+
+            return View(dictionary);
         }
     }
 }
