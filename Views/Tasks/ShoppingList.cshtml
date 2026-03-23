@@ -1,0 +1,33 @@
+﻿@model Dictionary<string, int>
+
+<style>
+    .simple-table {
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        width: 250px;
+    }
+
+    .simple-table td {
+        border: 1px solid #777;
+        padding: 5px 10px;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .simple-table td {
+        color: #333;
+    }
+</style>
+
+<h2>Our shopping list</h2>
+<table class="simple-table">
+    <tbody>
+        @foreach (var @row in @Model)
+        {
+            <tr>
+                <td>@row.Key</td>
+                <td>@row.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
