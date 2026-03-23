@@ -1,3 +1,5 @@
+using Sprint_13_Dy_Sa_Bo.Services;
+
 namespace Sprint_13_Dy_Sa_Bo
 {
     public class Program
@@ -8,6 +10,7 @@ namespace Sprint_13_Dy_Sa_Bo
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddTransient<ITimeService, SimpleTimeService>();
 
             var app = builder.Build();
 

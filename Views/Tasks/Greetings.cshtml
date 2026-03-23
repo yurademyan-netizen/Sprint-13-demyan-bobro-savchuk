@@ -1,0 +1,73 @@
+﻿@model DateTime
+<style>
+    .simple-table {
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        width: 250px;
+    }
+
+        .simple-table th,
+        .simple-table td {
+            border: 1px solid #777;
+            padding: 5px 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .simple-table th {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .simple-table td {
+            color: #333;
+        }
+</style>
+<h2>Greetings</h2>
+<hr/>
+<p>The value of my message is: @ViewData["Message1"]</p>
+<hr/>
+<p>The greeting is: @ViewData["Message2"]</p>
+<hr/>
+<p>Today in Ukraine is @Model.DayOfWeek</p>
+@if (Model.Hour >= 18){
+    <p>We wish you: Good evening!</p>
+}
+else if (Model.Hour >= 12)
+{
+    <p>We wish you: Good afternoon!</p>
+}
+else
+{
+    <p>We wish you: Good morning!</p>
+}
+<hr/>
+<p>Today is @Model.DayOfWeek</p>
+<hr />
+<table class="simple-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Day</td>
+            <td>@Model.DayOfWeek</td>
+        </tr>
+        <tr>
+            <td>Hour</td>
+            <td>@Model.Hour</td>
+        </tr>
+        <tr>
+            <td>Minute</td>
+            <td>@Model.Minute</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>@Model.Second</td>
+        </tr>
+    </tbody>
+</table>
+
