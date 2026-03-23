@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<div class="container mt-4" style="max-width: 450px;">
+
+    @if (ViewBag.Message != null)
+    {
+        <p class="font-monospace text-dark">
+            @ViewBag.Message
+        </p>
+    }
+    else
+    {
+        <h1 class="display-6 fw-bold mb-4">Your shopping cart</h1>
+
+        @using (Html.BeginForm("ShoppingCart", "Tasks", FormMethod.Post))
+        {
+            <div class="mb-3">
+                <label class="form-label text-muted mb-1">Input your fullname:</label>
+                @Html.TextBox("fullName", null, new { @class = "form-control rounded-0 border-secondary" })
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-muted mb-1">Input your address :</label>
+                @Html.TextBox("address", null, new { @class = "form-control rounded-0 border-secondary" })
+            </div>
+
+            <div class="mb-3 w-50">
+                @Html.DropDownList("supermarket", ViewBag.Supermarkets as SelectList, new { @class = "form-select rounded-0 border-secondary" })
+            </div>
+
+            <div class="mb-3">
+                @if (ViewBag.Dates != null)
+                {
+                    foreach (var date in ViewBag.Dates as List<DateTime>)
+                    {
+                        <div class="form-check">
+                            @Html.RadioButton("deliveryDate", date.ToString(), date == DateTime.Today, new { @class = "form-check-input", id = date.Ticks.ToString() })
+                            <label class="form-check-label text-muted" for="@date.Ticks">
+                                @date.ToString("M/d/yyyy h:mm:ss tt")
+                            </label>
+                        </div>
+                    }
+                }
+            </div>
+
+            <div class="mb-4 w-50">
+                @Html.ListBox("selectedProducts", ViewBag.Products as MultiSelectList, new { @class = "form-select rounded-0 border-secondary", size = "5" })
+            </div>
+
+            <button type="submit" class="btn btn-light border border-secondary rounded-0 px-3">Send</button>
+        }
+    }
+</div>
