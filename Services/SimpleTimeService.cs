@@ -2,9 +2,9 @@
 {
     public class SimpleTimeService : ITimeService
     {
-        public DateTime GetDateTime()
+        public DateTime GetTimeForTomorrow()
         {
-            return DateTime.Now;
+            return DateTime.Now.AddDays(1);
         }
     }
 }

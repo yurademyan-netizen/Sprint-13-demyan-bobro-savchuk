@@ -6,12 +6,6 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
 {
     public class TasksController : Controller
     {
-        private readonly ITimeService timeService;
-        public TasksController(ITimeService service)
-        {
-            timeService = service;
-        }
-
         public IActionResult SprintTasks()
         {
             return View();
@@ -19,9 +13,6 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
 
         public IActionResult Greetings()
         {
-            ViewData["Message1"] = "Hello C# Marathon!";
-            ViewData["Message2"] = "Welcome to our project!";
-
             return View();
         }
 

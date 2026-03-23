@@ -2,6 +2,6 @@
 {
     public interface ITimeService
     {
-        DateTime GetDateTime();
+        DateTime GetTimeForTomorrow();
     }
 }
