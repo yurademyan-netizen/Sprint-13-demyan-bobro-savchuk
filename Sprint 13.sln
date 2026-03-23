@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11612.150
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sprint 13 Dy Sa Bo", "Sprint 13 Dy Sa Bo.csproj", "{FB32B80B-D750-4084-8930-1E07DFC6DEDB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sprint 13", "Sprint 13.csproj", "{7C04FF39-1441-9FB9-9C0B-85BA76A2F7C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB32B80B-D750-4084-8930-1E07DFC6DEDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB32B80B-D750-4084-8930-1E07DFC6DEDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB32B80B-D750-4084-8930-1E07DFC6DEDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB32B80B-D750-4084-8930-1E07DFC6DEDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C04FF39-1441-9FB9-9C0B-85BA76A2F7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C04FF39-1441-9FB9-9C0B-85BA76A2F7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C04FF39-1441-9FB9-9C0B-85BA76A2F7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C04FF39-1441-9FB9-9C0B-85BA76A2F7C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,8 @@
+﻿@inject ITimeService service
+
+@{
+    DateTime date = service.GetTimeForTomorrow();
+}
+
+<h2>It's time to shopping!</h2>
+<p>@date.ToShortDateString()</p>
