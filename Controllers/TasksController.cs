@@ -39,7 +39,7 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
         [HttpGet]
         public IActionResult ShoppingCart()
         {
-            List<string> supermarkets = new List<string> { "WellMart", "Silpo", "ATB" };
+            List<string> supermarkets = new List<string> { "WellMart", "Silpo", "ATB", "Metro", "Auchan" };
             ViewBag.Supermarkets = new SelectList(supermarkets);
 
             List<DateTime> dates = new List<DateTime>
