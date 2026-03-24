@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "SuperMarkets";
+}
+
+<div class="d-flex flex-column align-items-start gap-2 mt-4">
+    <h1 class="display-2 fw-bold">Sprint13. Supermarkets</h1>
+
+    @foreach (var shop in ViewBag.Supermarkets)
+    {
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h2">@shop</span>
+            </div>
+        </nav>
+    }
+
+    

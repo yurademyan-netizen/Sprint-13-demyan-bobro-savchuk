@@ -84,5 +84,14 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
            
             return View();
         }
+
+        [HttpGet]
+        public IActionResult SuperMarkets()
+        {
+            List<string> shops = new List<string> { "WellMart", "Silpo", "ATB", "Metro", "Auchan" };
+            ViewBag.Supermarkets = shops;
+
+            return View();
+        }
     }
 }
