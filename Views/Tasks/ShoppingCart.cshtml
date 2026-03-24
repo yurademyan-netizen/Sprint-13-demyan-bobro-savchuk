@@ -38,7 +38,7 @@
                         <div class="form-check">
                             @Html.RadioButton("deliveryDate", date.ToString(), date == DateTime.Today, new { @class = "form-check-input", id = date.Ticks.ToString() })
                             <label class="form-check-label text-muted" for="@date.Ticks">
-                                @date.ToString("M/d/yyyy h:mm:ss tt")
+                                @date.ToString("d/M/yyyy h:mm:ss tt")
                             </label>
                         </div>
                     }

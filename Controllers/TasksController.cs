@@ -80,7 +80,8 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
             string products = string.Join(", ", selectedProducts);
             
 
-            ViewBag.Message = $"Your products({products}) will be shipped to the {supermarket} store at: {address}.Bon appetite, {fullName}!";
+            ViewBag.Message = $"Your products({products}) will be shipped to the {supermarket} store at: {address}.Bon appetite, {fullName}!" +
+                $"You will be able to receive your order on {deliveryDate?.ToString("dd.MM.yyyy")}";
            
             return View();
         }
