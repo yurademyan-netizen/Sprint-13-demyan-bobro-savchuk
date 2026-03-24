@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Humanizer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Sprint_13_Dy_Sa_Bo.Models;
 using Sprint_13_Dy_Sa_Bo.Services;
@@ -68,7 +69,7 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
         }
 
         [HttpPost]
-        public IActionResult ShoppingCart(string fullName, string address)
+        public IActionResult ShoppingCart(string fullName, string address, string supermarket, DateTime? deliveryDate, string[] selectedProducts)
         {
             if (fullName == null || address == null)
             {
@@ -76,8 +77,11 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
                 return View();
             }
 
-            ViewBag.Message = $"Your products will be shipped at: {address}.Bon appetite, {fullName}!";
+            string products = string.Join(", ", selectedProducts);
+            
 
+            ViewBag.Message = $"Your products({products}) will be shipped to the {supermarket} store at: {address}.Bon appetite, {fullName}!";
+           
             return View();
         }
     }
