@@ -39,10 +39,10 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
         [HttpGet]
         public IActionResult ShoppingCart()
         {
-            var supermarkets = new List<string> { "WellMart", "Silpo", "ATB" };
+            List<string> supermarkets = new List<string> { "WellMart", "Silpo", "ATB" };
             ViewBag.Supermarkets = new SelectList(supermarkets);
 
-            var dates = new List<DateTime>
+            List<DateTime> dates = new List<DateTime>
             {
                 DateTime.Today,
                 DateTime.Today.AddDays(1),
