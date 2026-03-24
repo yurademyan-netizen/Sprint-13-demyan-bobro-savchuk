@@ -72,7 +72,7 @@ namespace Sprint_13_Dy_Sa_Bo.Controllers
         {
             if (fullName == null || address == null)
             {
-                ViewBag.Message = $"enter correct dataenter correct data!!!!!!!";
+                ViewBag.Message = $"enter correct data!!!!!!!";
                 return View();
             }
 
